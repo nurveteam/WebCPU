@@ -1,4 +1,5 @@
-const kIsNodeJS = Object.prototype.toString.call(typeof process !== 'undefined' ? process : 0) === '[object process]';
+// const kIsNodeJS = Object.prototype.toString.call(typeof process !== 'undefined' ? process : 0) === '[object process]';
+const kIsNodeJS = false;
 const kRequire = kIsNodeJS ? module.require : null; // eslint-disable-line
 
 const _self = kIsNodeJS ? kRequire('worker_threads').parentPort : self; // eslint-disable-line
